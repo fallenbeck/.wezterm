@@ -32,7 +32,7 @@ config.enable_tab_bar = false
 
 -- Set the opacity of the terminal window
 config.window_background_opacity = 0.9
-config.text_background_opacity = 0.5
+-- config.text_background_opacity = 0.5
 config.macos_window_background_blur = 40
 
 -- WezTerm does not start in my VM
