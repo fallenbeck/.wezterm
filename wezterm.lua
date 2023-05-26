@@ -1,5 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local gpus = wezterm.gui.enumerate_gpus()
 
 -- This table will hold the configuration.
 local config = {}
@@ -33,6 +34,11 @@ config.enable_tab_bar = false
 config.window_background_opacity = 0.9
 config.text_background_opacity = 0.5
 config.macos_window_background_blur = 40
+
+-- WezTerm does not start in my VM
+print(gpus)
+config.front_end = "WebGpu"
+config.webgpu_force_fallback_adapter = true
 
 -- and finally, return the configuration to wezterm
 return config
