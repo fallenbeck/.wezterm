@@ -36,9 +36,9 @@ config.text_background_opacity = 0.5
 config.macos_window_background_blur = 40
 
 -- WezTerm does not start in my VM
-print(gpus)
-config.front_end = "WebGpu"
-config.webgpu_force_fallback_adapter = true
+-- print(gpus)
+-- config.front_end = "WebGpu"
+-- config.webgpu_force_fallback_adapter = true
 
 -- and finally, return the configuration to wezterm
 return config
