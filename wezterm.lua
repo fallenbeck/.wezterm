@@ -17,7 +17,7 @@ end
 -- This is where you actually apply your config choices
 --
 -- Font
-config.font = wezterm.font('Hack')
+config.font = wezterm.font('Hack Nerd Font')
 
 -- Set the size measured in points
 config.font_size = 14.0
