@@ -35,6 +35,12 @@ config.window_background_opacity = 0.9
 -- config.text_background_opacity = 0.5
 config.macos_window_background_blur = 40
 
+config.use_ime = true
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
+config.use_dead_keys = false
+
+
 -- WezTerm does not start in my VM
 -- print(gpus)
 -- config.front_end = "WebGpu"
