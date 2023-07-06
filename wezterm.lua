@@ -14,6 +14,7 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
+-- https://wezfurlong.org/wezterm/config/lua/config/index.html
 
 -- Initial terminal size
 config.initial_cols = 132
