@@ -34,9 +34,9 @@ config.color_scheme = 'GruvboxDark'
 config.enable_tab_bar = false
 
 -- Set the opacity of the terminal window
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.9
 -- config.text_background_opacity = 0.5
-config.macos_window_background_blur = 30
+config.macos_window_background_blur = 40
 
 -- Fixes to get [] and tilde ~ on german keyboards
 config.use_ime = true
