@@ -66,6 +66,12 @@ config.hyperlink_rules = {
         regex = [[\bfile://\S*\b]],
         format = '$0',
     },
+    -- vnc:// URI
+    -- Compiled-in default. Used if you don't specify any hyperlink_rules.
+    {
+        regex = [[\bvnc://\S*\b]],
+        format = '$0',
+    },
     -- Linkify things that look like URLs with numeric addresses as hosts.
     -- E.g. http://127.0.0.1:8000 for a local development server,
     -- or http://192.168.1.1 for the web interface of many routers.
@@ -86,6 +92,42 @@ config.hyperlink_rules = {
     {
         regex = [[["]?([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["]?]],
         format = 'https://www.github.com/$1/$3',
+    },
+    -- The following are the default rules provided by
+    -- wezterm.default_hyperlink_rules()
+    -- Matches: a URL in parens: (URL)
+    {
+        regex = '\\((\\w+://\\S+)\\)',
+        format = '$1',
+        highlight = 1,
+    },
+    -- Matches: a URL in brackets: [URL]
+    {
+        regex = '\\[(\\w+://\\S+)\\]',
+        format = '$1',
+        highlight = 1,
+    },
+    -- Matches: a URL in curly braces: {URL}
+    {
+        regex = '\\{(\\w+://\\S+)\\}',
+        format = '$1',
+        highlight = 1,
+    },
+    -- Matches: a URL in angle brackets: <URL>
+    {
+        regex = '<(\\w+://\\S+)>',
+        format = '$1',
+        highlight = 1,
+    },
+    -- Then handle URLs not wrapped in brackets
+    {
+        regex = '\\b\\w+://\\S+[)/a-zA-Z0-9-]+',
+        format = '$0',
+    },
+    -- implicit mailto link
+    {
+        regex = '\\b\\w+@[\\w-]+(\\.[\\w-]+)+\\b',
+        format = 'mailto:$0',
     },
 }
 
