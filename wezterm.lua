@@ -24,7 +24,7 @@ config.initial_rows = 42
 config.font = wezterm.font('Hack Nerd Font')
 
 -- Set the size measured in points
-config.font_size = 14.0
+config.font_size = 13.5
 
 -- For example, changing the color scheme:
 -- Find builtin-color schemes here:
