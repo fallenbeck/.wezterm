@@ -23,6 +23,11 @@ config.initial_rows = 42
 -- Font
 config.font = wezterm.font('Hack Nerd Font')
 
+-- Focus pane that has been clicked on even if windows did
+-- not have focus (comparable to Alacritty)
+config.swallow_mouse_click_on_window_focus = false
+config.swallow_mouse_click_on_pane_focus = true
+
 -- Set the size measured in points
 config.font_size = 13.5
 
