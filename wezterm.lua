@@ -1,11 +1,13 @@
+-- The documentation of the config options can be found here:
+-- https://wezfurlong.org/wezterm/config/lua/config/index.html
+-- sorted by tags:
+-- https://wezfurlong.org/wezterm/tags.html
+
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
 -- This table will hold the configuration.
 local config = {}
-
--- The documentation of the config options can be found here:
--- https://wezfurlong.org/wezterm/config/lua/config/index.html
 
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
@@ -14,7 +16,6 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
--- https://wezfurlong.org/wezterm/config/lua/config/index.html
 
 -- Initial terminal size
 config.initial_cols = 132
@@ -24,7 +25,7 @@ config.initial_rows = 42
 config.font = wezterm.font('Hack Nerd Font')
 
 -- Focus pane that has been clicked on even if windows did
--- not have focus (comparable to Alacritty)
+-- not have focus (comparable to Alacritty's behaviour)
 config.swallow_mouse_click_on_window_focus = false
 config.swallow_mouse_click_on_pane_focus = true
 
