@@ -36,6 +36,11 @@ config.font_size = 13.5
 -- Find builtin-color schemes here:
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
 config.color_scheme = 'GruvboxDark'
+-- config.color_scheme = 'ayu'
+-- config.color_scheme = 'ayu_light'
+-- config.color_scheme = 'Ayu Mirage'
+-- config.color_scheme = 'Ayu Mirage (Gogh)'
+-- config.color_scheme = 'Ayu Light (Gogh)'
 
 -- We do not use the tab bar (we use tmux)
 config.enable_tab_bar = false
