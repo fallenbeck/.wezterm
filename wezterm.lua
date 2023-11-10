@@ -22,7 +22,12 @@ config.initial_cols = 132
 config.initial_rows = 42
 
 -- Font
-config.font = wezterm.font('Hack Nerd Font')
+-- Display fonts available with
+-- wezterm ls-fonts --list-system
+-- config.font = wezterm.font('Hack Nerd Font')
+-- config.font = wezterm.font('Monaspace Neon')
+-- config.font = wezterm.font('JetBrains Mono')
+config.font = wezterm.font('SF Mono')
 
 -- Focus pane that has been clicked on even if windows did
 -- not have focus (comparable to Alacritty's behaviour)
