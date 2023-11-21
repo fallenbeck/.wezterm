@@ -64,8 +64,10 @@ config.font_size = 13.5
 -- For example, changing the color scheme:
 -- Find builtin-color schemes here:
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
--- config.color_scheme = 'GruvboxDark'
-config.color_scheme = 'Alabaster'
+config.color_scheme = 'GruvboxDark'
+-- config.color_scheme = 'Gruvbox light, medium (base16)'
+
+-- config.color_scheme = 'Alabaster'
 -- config.color_scheme = 'ayu'
 -- config.color_scheme = 'ayu_light'
 -- config.color_scheme = 'Ayu Mirage'
