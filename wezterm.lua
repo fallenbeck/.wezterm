@@ -21,13 +21,37 @@ end
 config.initial_cols = 132
 config.initial_rows = 42
 
+
 -- Font
 -- Display fonts available with
 -- wezterm ls-fonts --list-system
--- config.font = wezterm.font('Hack Nerd Font')
+
+-- Monaspace: https://monaspace.githubnext.com
 -- config.font = wezterm.font('Monaspace Neon')
--- config.font = wezterm.font('JetBrains Mono')
+-- config.font = wezterm.font('Monaspace Argon')
+-- config.font = wezterm.font('Monaspace Krypton')
+
+-- Apple San Francisco Mono: https://developer.apple.com/fonts/
 config.font = wezterm.font('SF Mono')
+
+-- Fira Code: https://github.com/tonsky/FiraCode
+-- config.font = wezterm.font('Fira Code')
+
+-- Victor Mono: https://rubjo.github.io/victor-mono/
+-- config.font = wezterm.font('Victor Mono')
+
+-- JetBrains Mono: https://www.jetbrains.com/de-de/lp/mono/
+-- config.font = wezterm.font('JetBrains Mono')
+
+-- Nerd Fonts: https://www.nerdfonts.com
+-- config.font = wezterm.font('Hack Nerd Font')
+
+-- Hack Font: https://sourcefoundry.org/hack/
+-- config.font = wezterm.font('Hack')
+
+-- Nerd Fonts: https://www.nerdfonts.com
+-- config.font = wezterm.font('Hack Nerd Font')
+
 
 -- Focus pane that has been clicked on even if windows did
 -- not have focus (comparable to Alacritty's behaviour)
