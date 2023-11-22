@@ -59,7 +59,7 @@ config.swallow_mouse_click_on_window_focus = false
 config.swallow_mouse_click_on_pane_focus = true
 
 -- Set the size measured in points
-config.font_size = 13.5
+config.font_size = 13
 
 -- For example, changing the color scheme:
 -- Find builtin-color schemes here:
