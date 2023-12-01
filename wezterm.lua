@@ -64,15 +64,13 @@ config.font_size = 13
 -- For example, changing the color scheme:
 -- Find builtin-color schemes here:
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
-config.color_scheme = 'GruvboxDark'
--- config.color_scheme = 'Gruvbox light, medium (base16)'
 
--- config.color_scheme = 'Alabaster'
--- config.color_scheme = 'ayu'
--- config.color_scheme = 'ayu_light'
--- config.color_scheme = 'Ayu Mirage'
--- config.color_scheme = 'Ayu Mirage (Gogh)'
--- config.color_scheme = 'Ayu Light (Gogh)'
+-- My preferred dark color scheme
+-- config.color_scheme = 'GruvboxDark'
+
+-- My preferred light color scheme
+config.color_scheme = 'Papercolor Light (Gogh)'
+
 
 -- We do not use the tab bar (we use tmux)
 config.enable_tab_bar = false
