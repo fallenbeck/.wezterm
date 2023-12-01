@@ -76,9 +76,16 @@ config.color_scheme = 'Papercolor Light (Gogh)'
 config.enable_tab_bar = false
 
 -- Set the opacity of the terminal window
-config.window_background_opacity = 0.9
--- config.text_background_opacity = 0.5
+
+-- Perfect background opacity for a dark theme
+-- config.window_background_opacity = 0.9
+
+-- Light themes might look better with higher opacity
+config.window_background_opacity = 0.7
+
+-- Blur the background
 config.macos_window_background_blur = 40
+
 
 -- Fixes to get [] and tilde ~ on german keyboards
 config.use_ime = true
