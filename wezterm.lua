@@ -66,10 +66,10 @@ config.font_size = 13
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
 
 -- My preferred dark color scheme
--- config.color_scheme = 'GruvboxDark'
+config.color_scheme = 'GruvboxDark'
 
 -- My preferred light color scheme
-config.color_scheme = 'Papercolor Light (Gogh)'
+-- config.color_scheme = 'Papercolor Light (Gogh)'
 
 
 -- We do not use the tab bar (we use tmux)
@@ -78,10 +78,10 @@ config.enable_tab_bar = false
 -- Set the opacity of the terminal window
 
 -- Perfect background opacity for a dark theme
--- config.window_background_opacity = 0.9
+config.window_background_opacity = 0.9
 
 -- Light themes might look better with higher opacity
-config.window_background_opacity = 0.7
+-- config.window_background_opacity = 0.7
 
 -- Blur the background
 config.macos_window_background_blur = 40
