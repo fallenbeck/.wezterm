@@ -31,7 +31,7 @@ config.initial_rows = 42
 -- config.font = wezterm.font('Monaspace Krypton')
 
 -- Apple San Francisco Mono: https://developer.apple.com/fonts/
-config.font = wezterm.font("SF Mono")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 
 -- Fira Code: https://github.com/tonsky/FiraCode
 -- config.font = wezterm.font('Fira Code')
