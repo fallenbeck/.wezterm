@@ -76,13 +76,13 @@ config.enable_tab_bar = false
 -- Set the opacity of the terminal window
 
 -- Perfect background opacity for a dark theme
--- config.window_background_opacity = 0.8
+config.window_background_opacity = 0.8
 
 -- Light themes might look better with higher opacity
 -- config.window_background_opacity = 0.7
 
 -- Blur the background
--- config.macos_window_background_blur = 40
+config.macos_window_background_blur = 60
 
 -- Fixes to get [] and tilde ~ on german keyboards
 config.use_ime = true
