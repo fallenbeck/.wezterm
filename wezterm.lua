@@ -6,6 +6,16 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
+-- https://github.com/catppuccin/WezTerm
+-- (Optional) To enable syncing with your OS theme, use wezterm.gui.get_appearance()
+function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "Catppuccin Mocha"
+	else
+		return "Catppuccin Latte"
+	end
+end
+
 -- This table will hold the configuration.
 local config = {}
 
@@ -65,10 +75,12 @@ config.font_size = 13
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
 
 -- My preferred dark color scheme
-config.color_scheme = "GruvboxDark"
+--config.color_scheme = "GruvboxDark"
 
 -- My preferred light color scheme
--- config.color_scheme = 'Papercolor Light (Gogh)'
+-- config.color_scheme = "Papercolor Light (Gogh)"
+-- config.color_scheme = "Catppuccin Latte"
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 -- We do not use the tab bar (we use tmux)
 config.enable_tab_bar = false
