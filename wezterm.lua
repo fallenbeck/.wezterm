@@ -6,16 +6,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
--- https://github.com/catppuccin/WezTerm
--- (Optional) To enable syncing with your OS theme, use wezterm.gui.get_appearance()
-function scheme_for_appearance(appearance)
-	if appearance:find("Dark") then
-		return "Catppuccin Mocha"
-	else
-		return "Catppuccin Latte"
-	end
-end
-
 -- This table will hold the configuration.
 local config = {}
 
@@ -26,6 +16,33 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
+
+--
+-- COLOR SCHEME
+--
+
+-- -- https://github.com/catppuccin/WezTerm
+-- -- (Optional) To enable syncing with your OS theme, use wezterm.gui.get_appearance()
+-- function scheme_for_appearance(appearance)
+-- 	if appearance:find("Dark") then
+-- 		return "Catppuccin Mocha"
+-- 	else
+-- 		return "Catppuccin Latte"
+-- 	end
+-- end
+-- config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+
+-- For example, changing the color scheme:
+-- Find builtin-color schemes here:
+-- https://wezfurlong.org/wezterm/colorschemes/index.html
+
+-- My preferred dark color scheme
+config.color_scheme = "GruvboxDark"
+-- config.color_scheme = "Gruvbox Dark (Gogh)"
+
+-- My preferred light color scheme
+-- config.color_scheme = "Papercolor Light (Gogh)"
+-- config.color_scheme = "Catppuccin Latte"
 
 -- Initial terminal size
 config.initial_cols = 132
@@ -70,18 +87,6 @@ config.swallow_mouse_click_on_pane_focus = true
 -- Set the size measured in points
 config.font_size = 13
 
--- For example, changing the color scheme:
--- Find builtin-color schemes here:
--- https://wezfurlong.org/wezterm/colorschemes/index.html
-
--- My preferred dark color scheme
---config.color_scheme = "GruvboxDark"
-
--- My preferred light color scheme
--- config.color_scheme = "Papercolor Light (Gogh)"
--- config.color_scheme = "Catppuccin Latte"
-config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
-
 -- We do not use the tab bar (we use tmux)
 config.enable_tab_bar = false
 
@@ -94,7 +99,7 @@ config.enable_tab_bar = false
 -- config.window_background_opacity = 0.7
 
 -- Blur the background
-config.macos_window_background_blur = 60
+-- config.macos_window_background_blur = 60
 
 -- Fixes to get [] and tilde ~ on german keyboards
 config.use_ime = true
