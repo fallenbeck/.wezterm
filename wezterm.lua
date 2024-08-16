@@ -212,7 +212,7 @@ config.hyperlink_rules = {
 -- Custom functions
 --
 
-local function move_pane(key, direction)
+local function select_pane(key, direction)
 	return {
 		key = key,
 		mods = "LEADER",
@@ -353,15 +353,15 @@ config.keys = {
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 
-	-- Moving around panes
-	move_pane("j", "Down"),
-	move_pane("k", "Up"),
-	move_pane("h", "Left"),
-	move_pane("l", "Right"),
-	move_pane("DownArrow", "Down"),
-	move_pane("UpArrow", "Up"),
-	move_pane("LeftArrow", "Left"),
-	move_pane("RightArrow", "Right"),
+	-- Selecting panes
+	select_pane("j", "Down"),
+	select_pane("k", "Up"),
+	select_pane("h", "Left"),
+	select_pane("l", "Right"),
+	select_pane("DownArrow", "Down"),
+	select_pane("UpArrow", "Up"),
+	select_pane("LeftArrow", "Left"),
+	select_pane("RightArrow", "Right"),
 
 	-- Resizing panes: LEADER, r, {hjkl}
 	{
