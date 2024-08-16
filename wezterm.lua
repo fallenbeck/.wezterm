@@ -227,12 +227,20 @@ local function resize_pane(key, direction)
 	}
 end
 
+local function select_tab(key, relative_direction)
+	return {
+		key = key,
+		mods = "CMD|SHIFT",
+		action = wezterm.action.ActivateTabRelative(relative_direction),
+	}
+end
+
 -- Powerline looking status bar
 -- Source: https://alexplescan.com/posts/2024/08/10/wezterm/
 local function segments_for_right_status(window)
 	return {
 		window:active_workspace(),
-		-- wezterm.strftime("%a %b %-d %H:%M"),
+		wezterm.strftime("%a %b %-d %H:%M"),
 		wezterm.hostname(),
 	}
 end
@@ -367,6 +375,12 @@ config.keys = {
 			timeout_milliseconds = 1000,
 		}),
 	},
+
+	-- Switching tabs
+	select_tab("h", -1),
+	select_tab("LeftArrow", -1),
+	select_tab("l", 1),
+	select_tab("RightArrow", 1),
 }
 
 config.key_tables = {
