@@ -235,6 +235,14 @@ local function select_tab(key, relative_direction)
 	}
 end
 
+local function move_tab(key, relative_direction)
+	return {
+		key = key,
+		mods = "CMD|SHIFT|OPT",
+		action = wezterm.action.MoveTabRelative(relative_direction),
+	}
+end
+
 -- Powerline looking status bar
 -- Source: https://alexplescan.com/posts/2024/08/10/wezterm/
 local function segments_for_right_status(window)
@@ -383,11 +391,18 @@ config.keys = {
 		mods = "CMD|SHIFT",
 		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
 	},
+
 	-- Switching tabs
 	select_tab("h", -1),
-	select_tab("LeftArrow", -1),
 	select_tab("l", 1),
+	select_tab("LeftArrow", -1),
 	select_tab("RightArrow", 1),
+
+	-- Moving tabs
+	move_tab("h", -1),
+	move_tab("l", 1),
+	move_tab("LeftArrow", -1),
+	move_tab("RightArrow", 1),
 }
 
 config.key_tables = {
