@@ -340,6 +340,7 @@ config.keys = {
 			mods = "CTRL",
 		}),
 	},
+
 	-- Splitting panes
 	{
 		key = '"',
@@ -376,6 +377,12 @@ config.keys = {
 		}),
 	},
 
+	-- Create new tab
+	{
+		key = "DownArrow",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	},
 	-- Switching tabs
 	select_tab("h", -1),
 	select_tab("LeftArrow", -1),
@@ -395,6 +402,7 @@ config.key_tables = {
 		resize_pane("RightArrow", "Right"),
 	},
 }
+
 -- WezTerm does not start in a Proxmox VM - debug output
 -- local gpus = wezterm.gui.enumerate_gpus()
 -- print(gpus)
