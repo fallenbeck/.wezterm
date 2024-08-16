@@ -8,5 +8,5 @@ configuration file on non-macOS systems.
 
 ## Sources
 
-- The fantastic [configuration documentation](https://wezfurlong.org/wezterm/config/files.html)
-- [https://alexplescan.com/posts/2024/08/10/wezterm/]
+- The fantastic [documentation](https://wezfurlong.org/wezterm/config/files.html)
+- https://alexplescan.com/posts/2024/08/10/wezterm/
